@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".HomeFragment">
+
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:clipToOutline="true"
+  android:elevation="6dp"
+        android:background="@drawable/rounded_grid">
+
+        <com.example.trackmymoney.WaveView
+            android:id="@+id/waveview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+
+            />
+
+    </FrameLayout>
+
+     <GridLayout
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="200dp">
+
+         <TextView
+             android:id="@+id/myexpensetext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="My Today's Expense"
+             android:textStyle="bold"
+             android:textSize="28sp"
+             android:layout_marginLeft="20dp"
+             />
+
+         <Spinner
+             android:id="@+id/changeexpenseviewbutton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_row="0"
+             android:layout_column="1"
+             android:layout_marginLeft="20dp"
+             android:gravity="center_vertical"
+             android:spinnerMode="dropdown" />
+
+     </GridLayout>
+
+    <ScrollView
+        android:id="@+id/expenselist"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="270dp"
+        android:padding="16dp">
+
+
+    </ScrollView>
+
+</FrameLayout>

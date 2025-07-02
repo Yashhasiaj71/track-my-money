@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/upper_rounded_grid"
+        >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:text="EXPENSE TRACKER"
+            android:textColor="@color/Secondary"
+            android:textSize="28sp"
+            android:textStyle="italic"
+
+            />
+
+    </GridLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+  android:layout_marginBottom="20dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_grid"
+        >
+
+        <Button
+            android:id="@+id/homebutton"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:background="@drawable/house_solid"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/plus_solid"
+            app:layout_constraintStart_toEndOf="@id/homebutton"
+            app:layout_constraintEnd_toStartOf="@+id/statsbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/statsbutton"
+            android:layout_gravity="center_vertical"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/chart_simple_solid"
+            app:layout_constraintStart_toEndOf="@+id/addbutton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
