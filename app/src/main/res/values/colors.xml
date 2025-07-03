@@ -6,4 +6,5 @@
     <color name="Secondary">#90E992</color>
     <color name="secondary2">#9990E992</color>
     <color name="colorPrimary">#388E3C</color>
+    <color name="Transperent">#00388E3C</color>
 </resources>

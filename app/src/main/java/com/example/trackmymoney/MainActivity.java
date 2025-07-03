@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     androidx.constraintlayout.widget.ConstraintLayout bottomNavigation;

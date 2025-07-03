@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/upper_rounded_grid"
-        >
+        android:background="@drawable/upper_rounded_grid">
 
         <ImageView
             android:id="@+id/logo"
@@ -24,9 +23,16 @@
             android:text="EXPENSE TRACKER"
             android:textColor="@color/Secondary"
             android:textSize="28sp"
-            android:textStyle="italic"
+            android:textStyle="italic" />
 
-            />
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bottom_rounded"
+            android:src="@drawable/baseline_supervised_user_circle_24" />
 
     </GridLayout>
 

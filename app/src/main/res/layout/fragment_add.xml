@@ -2,14 +2,145 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="32sp"
-        android:text="hello add expense" />
+        android:layout_height="5dp"
+        android:background="@color/black"
+        />
+
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <TextView
+             android:id="@+id/topPanel"
+             android:layout_width="match_parent"
+             android:layout_marginTop="5dp"
+             android:layout_height="80dp"
+             android:text="Add New Expense"
+             android:textSize="28sp"
+             android:gravity="center"
+             android:textStyle="bold"
+             android:textColor="@color/Secondary"
+             android:background="@drawable/bottom_rounded"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintBottom_toTopOf="@+id/amount_layout"
+
+             />
+
+        <GridLayout
+            android:id="@+id/amount_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/topPanel"
+            app:layout_constraintBottom_toTopOf="@+id/date_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Amount"
+                android:textSize="15sp"/>
+
+
+            <EditText
+                android:id="@+id/amouninput"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:background="@drawable/rounded_grid1"
+                android:drawableEnd="@drawable/baseline_currency_rupee_24"
+                android:gravity="center"
+                android:hint="Enter Amount "
+                android:inputType="number"
+                android:padding="12dp"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="@color/black" />
+        </GridLayout>
+
+
+
+        <GridLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/amount_layout"
+            app:layout_constraintBottom_toTopOf="@+id/select_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/dateinput"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:hint="Enter date"
+                android:gravity="center"
+                android:textColorHint="@color/black"
+                android:inputType="date"
+                android:drawableEnd="@drawable/baseline_calendar_month_24"
+                android:padding="12dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_grid1"/>
+        </GridLayout>
+
+         <GridLayout
+             android:id="@+id/select_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:layout_marginTop="20dp"
+             app:layout_constraintTop_toBottomOf="@+id/date_layout"
+
+
+             >
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:text="Category"
+                 />
+
+             <Spinner
+                 android:id="@+id/spinner"
+                 android:layout_width="350dp"
+                 android:layout_height="60dp"
+                 android:padding="12dp"
+                 android:layout_gravity="center_horizontal"
+                 android:background="@drawable/rounded_grid1"
+                 />
+         </GridLayout>
+
+         <GridLayout
+             android:id="@+id/descriptionlayout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             app:layout_constraintTop_toBottomOf="@+id/select_layout"
+
+             >
+
+
+         </GridLayout>
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
